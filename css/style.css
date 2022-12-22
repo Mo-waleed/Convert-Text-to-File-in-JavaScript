@@ -1,0 +1,80 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+:root {
+  --main-color: #17A2bb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--main-color);
+}
+
+.wraapper {
+  width: 450px;
+  background: #fff;
+  padding: 30px 25px 40px;
+  border-radius: 7px;
+}
+
+.wraapper :where(textarea, input, select, button) {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.wraapper textarea {
+  resize: none;
+  height: 270px;
+  border: 1px solid #ccc;
+  padding: 8px 13px;
+}
+
+.wraapper .file-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.file-options .option {
+  width: calc(100% / 2 - 8px)
+}
+
+.option :where(input, .select-menu) {
+  height: 50px;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin-top: 6px;
+}
+
+.option .select-menu select{
+  height: 50px;
+  background: none;
+}
+
+.wraapper .save-btn {
+  margin-top: 20px;
+  padding: 16px 0;
+  background: var(--main-color);
+  color: #fff;
+  opacity: 0.6;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.wraapper textarea:valid ~ .save-btn{
+  opacity: 1;
+  pointer-events:auto;
+}
